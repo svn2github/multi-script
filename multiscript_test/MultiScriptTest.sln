@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaLib", "..\multiscript\LuaLib.vcxproj", "{C64ED770-5148-43ED-A847-1C8300B79AEB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SquirrelLib", "..\multiscript\SquirrelLib.vcxproj", "{5D41C007-E893-42C8-B1AF-2D0FD1034733}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GMLib", "..\multiscript\GMLib.vcxproj", "{8E5FCB08-9053-4F0D-A1A4-A667A289D304}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiScriptLib", "..\multiscript\MultiScriptLib.vcxproj", "{1310E01D-35AD-4705-A33E-9E99AE65B091}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiScriptTest", "MultiScriptTest.vcxproj", "{41C86936-F3FF-4754-961A-96EC1BC40808}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OcamlLib", "..\multiscript\OcamlLib.vcxproj", "{CD1955A0-8F8F-48A3-8576-2F7F4D8046D7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FakeOcamlDLL", "..\multiscript\FakeOcamlDLL.vcxproj", "{E7BF24D6-59CF-4564-8EAC-C9AEE8DB600D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C64ED770-5148-43ED-A847-1C8300B79AEB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C64ED770-5148-43ED-A847-1C8300B79AEB}.Debug|Win32.Build.0 = Debug|Win32
+		{5D41C007-E893-42C8-B1AF-2D0FD1034733}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5D41C007-E893-42C8-B1AF-2D0FD1034733}.Debug|Win32.Build.0 = Debug|Win32
+		{8E5FCB08-9053-4F0D-A1A4-A667A289D304}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8E5FCB08-9053-4F0D-A1A4-A667A289D304}.Debug|Win32.Build.0 = Debug|Win32
+		{1310E01D-35AD-4705-A33E-9E99AE65B091}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1310E01D-35AD-4705-A33E-9E99AE65B091}.Debug|Win32.Build.0 = Debug|Win32
+		{41C86936-F3FF-4754-961A-96EC1BC40808}.Debug|Win32.ActiveCfg = Debug|Win32
+		{41C86936-F3FF-4754-961A-96EC1BC40808}.Debug|Win32.Build.0 = Debug|Win32
+		{CD1955A0-8F8F-48A3-8576-2F7F4D8046D7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD1955A0-8F8F-48A3-8576-2F7F4D8046D7}.Debug|Win32.Build.0 = Debug|Win32
+		{E7BF24D6-59CF-4564-8EAC-C9AEE8DB600D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E7BF24D6-59CF-4564-8EAC-C9AEE8DB600D}.Debug|Win32.Build.0 = Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

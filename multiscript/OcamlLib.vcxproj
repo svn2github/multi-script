@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CD1955A0-8F8F-48A3-8576-2F7F4D8046D7}</ProjectGuid>
+    <RootNamespace>OcamlLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\ocaml\byterun;..\ocaml\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ocaml\byterun\alloc.c" />
+    <ClCompile Include="..\ocaml\byterun\array.c" />
+    <ClCompile Include="..\ocaml\byterun\backtrace.c" />
+    <ClCompile Include="..\ocaml\byterun\callback.c" />
+    <ClCompile Include="..\ocaml\byterun\compact.c" />
+    <ClCompile Include="..\ocaml\byterun\compare.c" />
+    <ClCompile Include="..\ocaml\byterun\custom.c" />
+    <ClCompile Include="..\ocaml\byterun\debugger.c" />
+    <ClCompile Include="..\ocaml\byterun\extern.c" />
+    <ClCompile Include="..\ocaml\byterun\fail.c" />
+    <ClCompile Include="..\ocaml\byterun\finalise.c" />
+    <ClCompile Include="..\ocaml\byterun\fix_code.c" />
+    <ClCompile Include="..\ocaml\byterun\floats.c" />
+    <ClCompile Include="..\ocaml\byterun\freelist.c" />
+    <ClCompile Include="..\ocaml\byterun\gc_ctrl.c" />
+    <ClCompile Include="..\ocaml\byterun\globroots.c" />
+    <ClCompile Include="..\ocaml\byterun\hash.c" />
+    <ClCompile Include="..\ocaml\byterun\instrtrace.c" />
+    <ClCompile Include="..\ocaml\byterun\intern.c" />
+    <ClCompile Include="..\ocaml\byterun\ints.c" />
+    <ClCompile Include="..\ocaml\byterun\lexing.c" />
+    <ClCompile Include="..\ocaml\byterun\major_gc.c" />
+    <ClCompile Include="..\ocaml\byterun\md5.c" />
+    <ClCompile Include="..\ocaml\byterun\memory.c" />
+    <ClCompile Include="..\ocaml\byterun\meta.c" />
+    <ClCompile Include="..\ocaml\byterun\minor_gc.c" />
+    <ClCompile Include="..\ocaml\byterun\obj.c" />
+    <ClCompile Include="..\ocaml\byterun\parsing.c" />
+    <ClCompile Include="..\ocaml\byterun\printexc.c" />
+    <ClCompile Include="..\ocaml\byterun\roots.c" />
+    <ClCompile Include="..\ocaml\byterun\signals.c" />
+    <ClCompile Include="..\ocaml\byterun\signals_byt.c" />
+    <ClCompile Include="..\ocaml\byterun\stacks.c" />
+    <ClCompile Include="..\ocaml\byterun\str.c" />
+    <ClCompile Include="..\ocaml\byterun\sys.c" />
+    <ClCompile Include="..\ocaml\byterun\terminfo.c" />
+    <ClCompile Include="..\ocaml\byterun\weak.c" />
+    <ClCompile Include="..\ocaml\byterun\win32.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\ocaml\byterun\prims.c" />
+    <ClCompile Include="..\ocaml\byterun\custom_startup.c" />
+    <ClCompile Include="..\ocaml\byterun\dynlink.c" />
+    <ClCompile Include="..\ocaml\byterun\interp.c" />
+    <ClCompile Include="..\ocaml\byterun\misc.c" />
+    <ClCompile Include="..\ocaml\byterun\ocaml_io.c" />
+    <ClCompile Include="..\ocaml\byterun\startup.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ocaml\byterun\alloc.h" />
+    <ClInclude Include="..\ocaml\byterun\backtrace.h" />
+    <ClInclude Include="..\ocaml\byterun\callback.h" />
+    <ClInclude Include="..\ocaml\byterun\compact.h" />
+    <ClInclude Include="..\ocaml\byterun\compare.h" />
+    <ClInclude Include="..\ocaml\byterun\compatibility.h" />
+    <ClInclude Include="..\ocaml\byterun\config.h" />
+    <ClInclude Include="..\ocaml\byterun\custom.h" />
+    <ClInclude Include="..\ocaml\byterun\debugger.h" />
+    <ClInclude Include="..\ocaml\byterun\exec.h" />
+    <ClInclude Include="..\ocaml\byterun\fail.h" />
+    <ClInclude Include="..\ocaml\byterun\finalise.h" />
+    <ClInclude Include="..\ocaml\byterun\fix_code.h" />
+    <ClInclude Include="..\ocaml\byterun\freelist.h" />
+    <ClInclude Include="..\ocaml\byterun\gc.h" />
+    <ClInclude Include="..\ocaml\byterun\gc_ctrl.h" />
+    <ClInclude Include="..\ocaml\byterun\globroots.h" />
+    <ClInclude Include="..\ocaml\byterun\instrtrace.h" />
+    <ClInclude Include="..\ocaml\byterun\instruct.h" />
+    <ClInclude Include="..\ocaml\byterun\int64_emul.h" />
+    <ClInclude Include="..\ocaml\byterun\int64_format.h" />
+    <ClInclude Include="..\ocaml\byterun\int64_native.h" />
+    <ClInclude Include="..\ocaml\byterun\intext.h" />
+    <ClInclude Include="..\ocaml\byterun\major_gc.h" />
+    <ClInclude Include="..\ocaml\byterun\md5.h" />
+    <ClInclude Include="..\ocaml\byterun\memory.h" />
+    <ClInclude Include="..\ocaml\byterun\minor_gc.h" />
+    <ClInclude Include="..\ocaml\byterun\mlvalues.h" />
+    <ClInclude Include="..\ocaml\byterun\osdeps.h" />
+    <ClInclude Include="..\ocaml\byterun\prims.h" />
+    <ClInclude Include="..\ocaml\byterun\printexc.h" />
+    <ClInclude Include="..\ocaml\byterun\reverse.h" />
+    <ClInclude Include="..\ocaml\byterun\roots.h" />
+    <ClInclude Include="..\ocaml\byterun\signals.h" />
+    <ClInclude Include="..\ocaml\byterun\signals_machdep.h" />
+    <ClInclude Include="..\ocaml\byterun\stacks.h" />
+    <ClInclude Include="..\ocaml\byterun\sys.h" />
+    <ClInclude Include="..\ocaml\byterun\ui.h" />
+    <ClInclude Include="..\ocaml\byterun\weak.h" />
+    <ClInclude Include="..\ocaml\byterun\version.h" />
+    <ClInclude Include="..\ocaml\config\m.h" />
+    <ClInclude Include="..\ocaml\config\s.h" />
+    <CustomBuildStep Include="..\ocaml\byterun\dynlink.h" />
+    <CustomBuildStep Include="..\ocaml\byterun\interp.h" />
+    <ClInclude Include="..\ocaml\byterun\misc.h" />
+    <ClInclude Include="..\ocaml\byterun\ocaml_io.h" />
+    <CustomBuildStep Include="..\ocaml\byterun\startup.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

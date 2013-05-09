@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1310E01D-35AD-4705-A33E-9E99AE65B091}</ProjectGuid>
+    <RootNamespace>MultiScriptLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\lua\src;..\gm\src\gm;..\gm\src\platform\win32msvc;..\gm\src\binds;..\squirrel\squirrel;..\squirrel\include;..\angelscript\angelscript\source;..\angelscript\angelscript\include;..\ocaml\byterun;..\ocaml\config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ScriptInterface.cpp" />
+    <ClCompile Include="LuaScriptContext.cpp" />
+    <ClCompile Include="LuaScriptStack.cpp" />
+    <ClCompile Include="SquirrelScriptContext.cpp" />
+    <ClCompile Include="SquirrelScriptStack.cpp" />
+    <ClCompile Include="GMScriptContext.cpp" />
+    <ClCompile Include="GMScriptStack.cpp" />
+    <ClCompile Include="OcamlScriptContext.cpp" />
+    <ClCompile Include="OcamlScriptStack.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScriptInterface.h" />
+    <ClInclude Include="LuaScriptCommon.h" />
+    <ClInclude Include="LuaScriptContext.h" />
+    <ClInclude Include="LuaScriptStack.h" />
+    <ClInclude Include="SquirrelScriptContext.h" />
+    <ClInclude Include="SquirrelScriptStack.h" />
+    <ClInclude Include="GMScriptContext.h" />
+    <ClInclude Include="GMScriptStack.h" />
+    <ClInclude Include="OcamlScriptContext.h" />
+    <ClInclude Include="OcamlScriptStack.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="GMLib.vcxproj">
+      <Project>{8e5fcb08-9053-4f0d-a1a4-a667a289d304}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="LuaLib.vcxproj">
+      <Project>{c64ed770-5148-43ed-a847-1c8300b79aeb}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="OcamlLib.vcxproj">
+      <Project>{cd1955a0-8f8f-48a3-8576-2f7f4d8046d7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="SquirrelLib.vcxproj">
+      <Project>{5d41c007-e893-42c8-b1af-2d0fd1034733}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

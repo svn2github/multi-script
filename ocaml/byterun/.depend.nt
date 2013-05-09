@@ -1,0 +1,136 @@
+alloc.$(DO) alloc.$(SO) alloc.$(DBGO): alloc.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h custom.h major_gc.h freelist.h memory.h gc.h \
+  minor_gc.h stacks.h
+array.$(DO) array.$(SO) array.$(DBGO): array.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h fail.h memory.h gc.h major_gc.h freelist.h \
+  minor_gc.h
+backtrace.$(DO) backtrace.$(SO) backtrace.$(DBGO): backtrace.c config.h ../config/m.h ../config/s.h \
+  compatibility.h mlvalues.h misc.h alloc.h io.h instruct.h intext.h \
+  fix_code.h exec.h startup.h stacks.h memory.h gc.h major_gc.h \
+  freelist.h minor_gc.h sys.h backtrace.h
+callback.$(DO) callback.$(SO) callback.$(DBGO): callback.c callback.h compatibility.h mlvalues.h config.h \
+  ../config/m.h ../config/s.h misc.h fail.h memory.h gc.h major_gc.h \
+  freelist.h minor_gc.h interp.h instruct.h fix_code.h stacks.h
+compact.$(DO) compact.$(SO) compact.$(DBGO): compact.c config.h ../config/m.h ../config/s.h compatibility.h \
+  finalise.h roots.h misc.h memory.h gc.h mlvalues.h major_gc.h \
+  freelist.h minor_gc.h gc_ctrl.h weak.h
+compare.$(DO) compare.$(SO) compare.$(DBGO): compare.c custom.h compatibility.h mlvalues.h config.h \
+  ../config/m.h ../config/s.h misc.h fail.h memory.h gc.h major_gc.h \
+  freelist.h minor_gc.h
+custom.$(DO) custom.$(SO) custom.$(DBGO): custom.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h custom.h fail.h memory.h gc.h major_gc.h \
+  freelist.h minor_gc.h
+debugger.$(DO) debugger.$(SO) debugger.$(DBGO): debugger.c config.h ../config/m.h ../config/s.h \
+  compatibility.h debugger.h misc.h mlvalues.h fail.h fix_code.h \
+  instruct.h intext.h io.h stacks.h memory.h gc.h major_gc.h freelist.h \
+  minor_gc.h sys.h
+dynlink.$(DO) dynlink.$(SO) dynlink.$(DBGO): dynlink.c config.h ../config/m.h ../config/s.h compatibility.h \
+  alloc.h misc.h mlvalues.h dynlink.h fail.h memory.h gc.h major_gc.h \
+  freelist.h minor_gc.h osdeps.h prims.h
+extern.$(DO) extern.$(SO) extern.$(DBGO): extern.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h custom.h fail.h gc.h intext.h io.h fix_code.h \
+  memory.h major_gc.h freelist.h minor_gc.h reverse.h
+fail.$(DO) fail.$(SO) fail.$(DBGO): fail.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h fail.h io.h gc.h memory.h major_gc.h \
+  freelist.h minor_gc.h printexc.h signals.h stacks.h
+finalise.$(DO) finalise.$(SO) finalise.$(DBGO): finalise.c callback.h compatibility.h mlvalues.h config.h \
+  ../config/m.h ../config/s.h misc.h fail.h roots.h memory.h gc.h \
+  major_gc.h freelist.h minor_gc.h signals.h
+fix_code.$(DO) fix_code.$(SO) fix_code.$(DBGO): fix_code.c config.h ../config/m.h ../config/s.h \
+  compatibility.h debugger.h misc.h mlvalues.h fix_code.h instruct.h \
+  md5.h io.h memory.h gc.h major_gc.h freelist.h minor_gc.h reverse.h
+floats.$(DO) floats.$(SO) floats.$(DBGO): floats.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h fail.h memory.h gc.h major_gc.h freelist.h \
+  minor_gc.h reverse.h stacks.h
+freelist.$(DO) freelist.$(SO) freelist.$(DBGO): freelist.c config.h ../config/m.h ../config/s.h \
+  compatibility.h freelist.h misc.h mlvalues.h gc.h gc_ctrl.h major_gc.h
+gc_ctrl.$(DO) gc_ctrl.$(SO) gc_ctrl.$(DBGO): gc_ctrl.c alloc.h compatibility.h misc.h config.h \
+  ../config/m.h ../config/s.h mlvalues.h compact.h custom.h finalise.h \
+  roots.h memory.h gc.h major_gc.h freelist.h minor_gc.h gc_ctrl.h \
+  stacks.h
+globroots.$(DO) globroots.$(SO) globroots.$(DBGO): globroots.c memory.h compatibility.h config.h ../config/m.h \
+  ../config/s.h gc.h mlvalues.h misc.h major_gc.h freelist.h minor_gc.h \
+  globroots.h
+hash.$(DO) hash.$(SO) hash.$(DBGO): hash.c mlvalues.h compatibility.h config.h ../config/m.h \
+  ../config/s.h misc.h custom.h memory.h gc.h major_gc.h freelist.h \
+  minor_gc.h
+instrtrace.$(DO) instrtrace.$(SO) instrtrace.$(DBGO): instrtrace.c
+intern.$(DO) intern.$(SO) intern.$(DBGO): intern.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h custom.h fail.h gc.h intext.h io.h fix_code.h \
+  memory.h major_gc.h freelist.h minor_gc.h reverse.h
+interp.$(DO) interp.$(SO) interp.$(DBGO): interp.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h backtrace.h callback.h debugger.h fail.h \
+  fix_code.h instrtrace.h instruct.h interp.h major_gc.h freelist.h \
+  memory.h gc.h minor_gc.h prims.h signals.h stacks.h jumptbl.h
+ints.$(DO) ints.$(SO) ints.$(DBGO): ints.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h custom.h fail.h intext.h io.h fix_code.h \
+  memory.h gc.h major_gc.h freelist.h minor_gc.h int64_native.h
+io.$(DO) io.$(SO) io.$(DBGO): io.c config.h ../config/m.h ../config/s.h compatibility.h alloc.h \
+  misc.h mlvalues.h custom.h fail.h io.h memory.h gc.h major_gc.h \
+  freelist.h minor_gc.h signals.h sys.h
+lexing.$(DO) lexing.$(SO) lexing.$(DBGO): lexing.c fail.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h stacks.h memory.h gc.h major_gc.h freelist.h \
+  minor_gc.h
+main.$(DO) main.$(SO) main.$(DBGO): main.c misc.h compatibility.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h sys.h
+major_gc.$(DO) major_gc.$(SO) major_gc.$(DBGO): major_gc.c compact.h config.h ../config/m.h ../config/s.h \
+  compatibility.h misc.h custom.h mlvalues.h fail.h finalise.h roots.h \
+  memory.h gc.h major_gc.h freelist.h minor_gc.h gc_ctrl.h weak.h
+md5.$(DO) md5.$(SO) md5.$(DBGO): md5.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h fail.h md5.h io.h memory.h gc.h major_gc.h \
+  freelist.h minor_gc.h reverse.h
+memory.$(DO) memory.$(SO) memory.$(DBGO): memory.c fail.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h freelist.h gc.h gc_ctrl.h major_gc.h memory.h \
+  minor_gc.h signals.h
+meta.$(DO) meta.$(SO) meta.$(DBGO): meta.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h fail.h fix_code.h interp.h intext.h io.h \
+  major_gc.h freelist.h memory.h gc.h minor_gc.h prims.h stacks.h
+minor_gc.$(DO) minor_gc.$(SO) minor_gc.$(DBGO): minor_gc.c config.h ../config/m.h ../config/s.h \
+  compatibility.h fail.h misc.h mlvalues.h finalise.h roots.h memory.h \
+  gc.h major_gc.h freelist.h minor_gc.h gc_ctrl.h signals.h
+misc.$(DO) misc.$(SO) misc.$(DBGO): misc.c config.h ../config/m.h ../config/s.h compatibility.h \
+  misc.h memory.h gc.h mlvalues.h major_gc.h freelist.h minor_gc.h
+obj.$(DO) obj.$(SO) obj.$(DBGO): obj.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h fail.h gc.h interp.h major_gc.h freelist.h \
+  memory.h minor_gc.h prims.h
+parsing.$(DO) parsing.$(SO) parsing.$(DBGO): parsing.c config.h ../config/m.h ../config/s.h compatibility.h \
+  mlvalues.h misc.h memory.h gc.h major_gc.h freelist.h minor_gc.h \
+  alloc.h
+prims.$(DO) prims.$(SO) prims.$(DBGO): prims.c mlvalues.h compatibility.h config.h ../config/m.h \
+  ../config/s.h misc.h prims.h
+printexc.$(DO) printexc.$(SO) printexc.$(DBGO): printexc.c backtrace.h mlvalues.h compatibility.h config.h \
+  ../config/m.h ../config/s.h misc.h callback.h debugger.h fail.h \
+  printexc.h
+roots.$(DO) roots.$(SO) roots.$(DBGO): roots.c finalise.h roots.h misc.h compatibility.h config.h \
+  ../config/m.h ../config/s.h memory.h gc.h mlvalues.h major_gc.h \
+  freelist.h minor_gc.h globroots.h stacks.h
+signals.$(DO) signals.$(SO) signals.$(DBGO): signals.c alloc.h compatibility.h misc.h config.h \
+  ../config/m.h ../config/s.h mlvalues.h callback.h fail.h memory.h gc.h \
+  major_gc.h freelist.h minor_gc.h roots.h signals.h signals_machdep.h \
+  sys.h
+signals_byt.$(DO) signals_byt.$(SO) signals_byt.$(DBGO): signals_byt.c config.h ../config/m.h ../config/s.h \
+  compatibility.h memory.h gc.h mlvalues.h misc.h major_gc.h freelist.h \
+  minor_gc.h osdeps.h signals.h signals_machdep.h
+stacks.$(DO) stacks.$(SO) stacks.$(DBGO): stacks.c config.h ../config/m.h ../config/s.h compatibility.h \
+  fail.h misc.h mlvalues.h stacks.h memory.h gc.h major_gc.h freelist.h \
+  minor_gc.h
+startup.$(DO) startup.$(SO) startup.$(DBGO): startup.c config.h ../config/m.h ../config/s.h compatibility.h \
+  alloc.h misc.h mlvalues.h backtrace.h callback.h custom.h debugger.h \
+  dynlink.h exec.h fail.h fix_code.h gc_ctrl.h instrtrace.h interp.h \
+  intext.h io.h memory.h gc.h major_gc.h freelist.h minor_gc.h osdeps.h \
+  prims.h printexc.h reverse.h signals.h stacks.h sys.h startup.h \
+  version.h
+str.$(DO) str.$(SO) str.$(DBGO): str.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h fail.h
+sys.$(DO) sys.$(SO) sys.$(DBGO): sys.c config.h ../config/m.h ../config/s.h compatibility.h alloc.h \
+  misc.h mlvalues.h debugger.h fail.h instruct.h osdeps.h signals.h \
+  stacks.h memory.h gc.h major_gc.h freelist.h minor_gc.h sys.h
+terminfo.$(DO) terminfo.$(SO) terminfo.$(DBGO): terminfo.c config.h ../config/m.h ../config/s.h \
+  compatibility.h alloc.h misc.h mlvalues.h fail.h io.h
+unix.$(DO) unix.$(SO) unix.$(DBGO): unix.c config.h ../config/m.h ../config/s.h compatibility.h \
+  memory.h gc.h mlvalues.h misc.h major_gc.h freelist.h minor_gc.h \
+  osdeps.h
+weak.$(DO) weak.$(SO) weak.$(DBGO): weak.c alloc.h compatibility.h misc.h config.h ../config/m.h \
+  ../config/s.h mlvalues.h fail.h major_gc.h freelist.h memory.h gc.h \
+  minor_gc.h
+alloc.d.o: alloc.c alloc.h compatibility.h misc.h config.h ../config/m.h \

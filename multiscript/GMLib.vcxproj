@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8E5FCB08-9053-4F0D-A1A4-A667A289D304}</ProjectGuid>
+    <RootNamespace>GMLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../gm/src/gm;../gm/src/binds;../gm/src/platform/win32msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\gm\src\gm\gmArraySimple.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmByteCode.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmByteCodeGen.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmCodeGen.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmCodeGenHooks.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmCodeTree.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmCrc.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmDebug.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmDebugger.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmFunctionObject.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmHash.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmIncGC.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmLibHooks.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmListDouble.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmLog.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmMachine.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmMachineLib.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmMem.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmMemChain.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmMemFixed.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmMemFixedSet.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmOperators.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmParser.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmScanner.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmStream.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmStreamBuffer.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmStringObject.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmTableObject.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmThread.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmUserObject.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmUtil.cpp" />
+    <ClCompile Include="..\gm\src\gm\gmVariable.cpp" />
+    <ClCompile Include="..\gm\src\binds\gmArrayLib.cpp" />
+    <ClCompile Include="..\gm\src\binds\gmCall.cpp" />
+    <ClCompile Include="..\gm\src\binds\gmGCRoot.cpp" />
+    <ClCompile Include="..\gm\src\binds\gmGCRootUtil.cpp" />
+    <ClCompile Include="..\gm\src\binds\gmHelpers.cpp" />
+    <ClCompile Include="..\gm\src\binds\gmMathLib.cpp" />
+    <ClCompile Include="..\gm\src\binds\gmStringLib.cpp" />
+    <ClCompile Include="..\gm\src\binds\gmSystemLib.cpp" />
+    <ClCompile Include="..\gm\src\binds\gmVector3Lib.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\gm\src\gm\gmArraySimple.h" />
+    <ClInclude Include="..\gm\src\gm\gmByteCode.h" />
+    <ClInclude Include="..\gm\src\gm\gmByteCodeGen.h" />
+    <ClInclude Include="..\gm\src\gm\gmCodeGen.h" />
+    <ClInclude Include="..\gm\src\gm\gmCodeGenHooks.h" />
+    <ClInclude Include="..\gm\src\gm\gmCodeTree.h" />
+    <ClInclude Include="..\gm\src\gm\gmConfig.h" />
+    <ClInclude Include="..\gm\src\gm\gmCrc.h" />
+    <ClInclude Include="..\gm\src\gm\gmDebug.h" />
+    <ClInclude Include="..\gm\src\gm\gmDebugger.h" />
+    <ClInclude Include="..\gm\src\gm\gmFunctionObject.h" />
+    <ClInclude Include="..\gm\src\gm\gmHash.h" />
+    <ClInclude Include="..\gm\src\gm\gmIncGC.h" />
+    <ClInclude Include="..\gm\src\gm\gmIterator.h" />
+    <ClInclude Include="..\gm\src\gm\gmLibHooks.h" />
+    <ClInclude Include="..\gm\src\gm\gmListDouble.h" />
+    <ClInclude Include="..\gm\src\gm\gmLog.h" />
+    <ClInclude Include="..\gm\src\gm\gmMachine.h" />
+    <ClInclude Include="..\gm\src\gm\gmMachineLib.h" />
+    <ClInclude Include="..\gm\src\gm\gmMem.h" />
+    <ClInclude Include="..\gm\src\gm\gmMemChain.h" />
+    <ClInclude Include="..\gm\src\gm\gmMemFixed.h" />
+    <ClInclude Include="..\gm\src\gm\gmMemFixedSet.h" />
+    <ClInclude Include="..\gm\src\gm\gmOperators.h" />
+    <ClInclude Include="..\gm\src\gm\gmParser.cpp.h" />
+    <ClInclude Include="..\gm\src\gm\gmScanner.h" />
+    <ClInclude Include="..\gm\src\gm\gmStream.h" />
+    <ClInclude Include="..\gm\src\gm\gmStreamBuffer.h" />
+    <ClInclude Include="..\gm\src\gm\gmStringObject.h" />
+    <ClInclude Include="..\gm\src\gm\gmTableObject.h" />
+    <ClInclude Include="..\gm\src\gm\gmThread.h" />
+    <ClInclude Include="..\gm\src\gm\gmUserObject.h" />
+    <ClInclude Include="..\gm\src\gm\gmUtil.h" />
+    <ClInclude Include="..\gm\src\gm\gmVariable.h" />
+    <ClInclude Include="..\gm\src\binds\gmArrayLib.h" />
+    <ClInclude Include="..\gm\src\binds\gmCall.h" />
+    <ClInclude Include="..\gm\src\binds\gmGCRoot.h" />
+    <ClInclude Include="..\gm\src\binds\gmGCRootUtil.h" />
+    <ClInclude Include="..\gm\src\binds\gmHelpers.h" />
+    <ClInclude Include="..\gm\src\binds\gmMathLib.h" />
+    <ClInclude Include="..\gm\src\binds\gmStringLib.h" />
+    <ClInclude Include="..\gm\src\binds\gmSystemLib.h" />
+    <ClInclude Include="..\gm\src\binds\gmVector3Lib.h" />
+    <ClInclude Include="..\gm\src\platform\win32msvc\gmConfig_p.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

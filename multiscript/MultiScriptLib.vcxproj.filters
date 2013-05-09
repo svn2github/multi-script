@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Base">
+      <UniqueIdentifier>{7e5c4bcc-2c9c-48a6-b5d2-35420999b724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bindings">
+      <UniqueIdentifier>{0e56a15c-d3a0-4902-9dba-e9dde25e6889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bindings\Lua">
+      <UniqueIdentifier>{320b90f8-87b3-4872-b14c-bd1fd412f909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bindings\Squirrel">
+      <UniqueIdentifier>{bbba8cd8-ede9-4001-a2cf-19235a0877a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bindings\GameMonkey">
+      <UniqueIdentifier>{1584cebc-289f-4906-86ad-a6b0b3878c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Bindings\Ocaml">
+      <UniqueIdentifier>{0b8d857f-679f-44ef-af7b-0200749039a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ScriptInterface.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaScriptContext.cpp">
+      <Filter>Bindings\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaScriptStack.cpp">
+      <Filter>Bindings\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="SquirrelScriptContext.cpp">
+      <Filter>Bindings\Squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="SquirrelScriptStack.cpp">
+      <Filter>Bindings\Squirrel</Filter>
+    </ClCompile>
+    <ClCompile Include="GMScriptContext.cpp">
+      <Filter>Bindings\GameMonkey</Filter>
+    </ClCompile>
+    <ClCompile Include="GMScriptStack.cpp">
+      <Filter>Bindings\GameMonkey</Filter>
+    </ClCompile>
+    <ClCompile Include="OcamlScriptContext.cpp">
+      <Filter>Bindings\Ocaml</Filter>
+    </ClCompile>
+    <ClCompile Include="OcamlScriptStack.cpp">
+      <Filter>Bindings\Ocaml</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ScriptInterface.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaScriptCommon.h">
+      <Filter>Bindings\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaScriptContext.h">
+      <Filter>Bindings\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaScriptStack.h">
+      <Filter>Bindings\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="SquirrelScriptContext.h">
+      <Filter>Bindings\Squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="SquirrelScriptStack.h">
+      <Filter>Bindings\Squirrel</Filter>
+    </ClInclude>
+    <ClInclude Include="GMScriptContext.h">
+      <Filter>Bindings\GameMonkey</Filter>
+    </ClInclude>
+    <ClInclude Include="GMScriptStack.h">
+      <Filter>Bindings\GameMonkey</Filter>
+    </ClInclude>
+    <ClInclude Include="OcamlScriptContext.h">
+      <Filter>Bindings\Ocaml</Filter>
+    </ClInclude>
+    <ClInclude Include="OcamlScriptStack.h">
+      <Filter>Bindings\Ocaml</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

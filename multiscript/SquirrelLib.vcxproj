@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5D41C007-E893-42C8-B1AF-2D0FD1034733}</ProjectGuid>
+    <RootNamespace>SquirrelLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\squirrel\include;..\squirrel\squirrel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\squirrel\sqstdlib\sqstdaux.cpp" />
+    <ClCompile Include="..\squirrel\sqstdlib\sqstdblob.cpp" />
+    <ClCompile Include="..\squirrel\sqstdlib\sqstdio.cpp" />
+    <ClCompile Include="..\squirrel\sqstdlib\sqstdmath.cpp" />
+    <ClCompile Include="..\squirrel\sqstdlib\sqstdrex.cpp" />
+    <ClCompile Include="..\squirrel\sqstdlib\sqstdstream.cpp" />
+    <ClCompile Include="..\squirrel\sqstdlib\sqstdstring.cpp" />
+    <ClCompile Include="..\squirrel\sqstdlib\sqstdsystem.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqapi.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqbaselib.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqclass.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqcompiler.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqdebug.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqfuncstate.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqlexer.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqmem.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqobject.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqstate.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqtable.cpp" />
+    <ClCompile Include="..\squirrel\squirrel\sqvm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\squirrel\include\sqstdaux.h" />
+    <ClInclude Include="..\squirrel\include\sqstdblob.h" />
+    <ClInclude Include="..\squirrel\sqstdlib\sqstdblobimpl.h" />
+    <ClInclude Include="..\squirrel\include\sqstdio.h" />
+    <ClInclude Include="..\squirrel\include\sqstdmath.h" />
+    <ClInclude Include="..\squirrel\sqstdlib\sqstdstream.h" />
+    <ClInclude Include="..\squirrel\include\sqstdstring.h" />
+    <ClInclude Include="..\squirrel\include\sqstdsystem.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqarray.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqclass.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqclosure.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqcompiler.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqfuncproto.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqfuncstate.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqlexer.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqobject.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqopcodes.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqpcheader.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqstate.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqstring.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqtable.h" />
+    <ClInclude Include="..\squirrel\include\squirrel.h" />
+    <ClInclude Include="..\squirrel\squirrel\squserdata.h" />
+    <ClInclude Include="..\squirrel\squirrel\squtils.h" />
+    <ClInclude Include="..\squirrel\squirrel\sqvm.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
